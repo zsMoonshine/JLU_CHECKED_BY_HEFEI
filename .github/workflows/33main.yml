@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   schedule:
   # 定时任务，在每天的5点推送天气信息到邮箱
-    - cron: '56 14 * * *'
+    - cron: '1 15 * * *'
 
 jobs:
   bot:
@@ -25,13 +25,13 @@ jobs:
         uses: dawidd6/action-send-mail@master
         with:
           # 这些是发送邮件需要配置的参数，更多详细的说明请访问具体的仓库
-          server_address: smtp.qq.com
+          server_address: smtp.163.com
           server_port: 465
           # 这些sectret的环境变量需要配置在setting中的secret下
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
           body: file://result.html
-          to: 992298079@qq.com
+          to: 1065993188@qq.com
           from: GitHub Actions
           content_type: text/html
