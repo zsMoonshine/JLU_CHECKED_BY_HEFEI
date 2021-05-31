@@ -3,7 +3,7 @@ name: 'GitHub Actions Weather Bot'
 on:
   schedule:
   # 定时任务，在每天的5点推送天气信息到邮箱
-    - cron: '26 14 * * *'
+    - cron: '29 14 * * *'
 
 jobs:
   bot:
