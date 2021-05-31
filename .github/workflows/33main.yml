@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: weather
-          body: file://email.txt
+          body: file://result.html
           to: 1065993188@qq.com
           from: GitHub Actions
           content_type: text/plain
