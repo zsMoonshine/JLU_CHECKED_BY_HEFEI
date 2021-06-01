@@ -1,0 +1,25 @@
+name: 'Test Timer Bot'
+ 
+on: 
+  schedule:
+    - cron: '35 2 * * *'    
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+    # 首先copy git仓库到虚拟机上
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      # - name: 'Install dependencies'
+      #   run: python -m pip install --upgrade pip
+      - name: 'Install requirements'
+        run: pip install -r requirements.txt
+      - name: 'Run checkers'
+        run: python test.py
+
+
