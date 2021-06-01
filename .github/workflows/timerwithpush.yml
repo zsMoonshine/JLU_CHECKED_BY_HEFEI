@@ -1,10 +1,10 @@
-name: 'Test Timer Bot'
+name: 'Auto Checker Bot'
  
 on: 
   push:
     branches: [ main ]
   schedule:
-    - cron: '05 3 * * *'    
+    - cron: '05 22 * * *'    
 
 jobs:
   bot:
@@ -22,6 +22,6 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r requirements.txt
       - name: 'Run checkers'
-        run: python test.py
+        run: python user.py
 
 
