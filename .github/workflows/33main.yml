@@ -1,11 +1,8 @@
 name: 'GitHub Actions Weather Bot'
  
 on:
-  push:
-    branches: [ main ]
-  #schedule:
-  # 定时任务，在每天的5点推送天气信息到邮箱
-   # - cron: '5 22 * * *'
+  schedule:
+    - cron: '50 1 * * *'    
 
 jobs:
   bot:
