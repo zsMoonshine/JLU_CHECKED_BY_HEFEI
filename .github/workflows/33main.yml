@@ -2,7 +2,7 @@ name: 'GitHub Actions Weather Bot'
  
 on:
   schedule:
-    - cron: '50 1 * * *'    
+    - cron: '05 2 * * *'    
 
 jobs:
   bot:
@@ -20,6 +20,6 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r requirements.txt
       - name: 'Run checkers'
-        run: python test.py
+        run: python user.py
 
 
